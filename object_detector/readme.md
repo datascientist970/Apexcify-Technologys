@@ -1,4 +1,4 @@
-Object Detection & Tracking with YOLOv8 + SORT
+# Object Detection & Tracking with YOLOv8 + SORT
 A real-time object detection and tracking application that identifies objects in videos and assigns unique tracking IDs to each object.
 
 What This Project Does
