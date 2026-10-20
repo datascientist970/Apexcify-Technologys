@@ -1,77 +1,80 @@
-# AI Engineering Internship Projects – Apexcify Technologies
+# AI Engineering Internship Projects — Apexcify Technologys
 
-Welcome to my AI Engineering Internship Projects Repository.
-This repository contains all the projects, experiments, and tasks I completed during my internship at Apexcify Technologies.
+> A collection of the AI/ML projects built during my AI Engineering internship at Apexcify Technologys: an NLP FAQ chatbot, an emotion-recognition image classifier, a real-time object detection & tracking app, and an adaptive AI game opponent.
 
-The goal of this repository is to document my learning journey, showcase practical implementations, and demonstrate my skills in Artificial Intelligence, Machine Learning, and Generative AI.
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Django](https://img.shields.io/badge/Django-Web_Apps-green)
+![TensorFlow](https://img.shields.io/badge/ML-TensorFlow_/_Keras-orange)
+![YOLOv8](https://img.shields.io/badge/CV-YOLOv8_+_SORT-purple)
 
-About the Internship
+## Overview
 
-### During my internship as an AI Engineer Intern, I worked on multiple projects related to:
+This repository documents my AI Engineering internship at **Apexcify Technologys**. Each folder is a self-contained project with its own code (and its own README where provided), covering a different applied-AI area: natural language processing, image classification, real-time computer vision, and game AI.
 
-Artificial Intelligence
+## Projects Inside
 
-Machine Learning
+### 1. FAQ Chatbot — `faq_chatbot/`
+A Django web app whose chatbot answers user questions by NLP-matching them against an admin-managed FAQ database (`chatbot/nlp_processor.py`), with confidence scoring, session/conversation tracking, and multi-intent handling. FAQs are managed through the Django admin panel.
+→ See `faq_chatbot/Readme.md`
 
-Natural Language Processing
+### 2. AI Image Classifier (EmotionAI) — `image_classifier/`
+A Django web app that recognizes human emotions — **Happy, Sad, Neutral** — from uploaded photos, using a model trained with Google's Teachable Machine and exported as Keras (`.h5`) and TFLite (`model_files/`). Features drag-and-drop upload, image preview, and instant predictions with confidence scores.
+→ See `image_classifier/README.md`
 
-Automation Tools
+### 3. Object Detection & Tracking — `object_detector/`
+A Django web app for video object detection and multi-object tracking: objects are detected per frame and assigned persistent tracking IDs using a SORT-style tracker (`detector/tracker.py`, `detector/sort.py`), with bounding boxes, class labels, and confidence scores shown in real time.
+→ See `object_detector/readme.md`
 
-AI-powered Applications
+### 4. Rock–Paper–Scissors with AI Opponent — `Rock-Paper-Scissors-with-AI-Opponent.py`
+A single-file Python game with two AI modes: **basic** (random play) and **advanced** — an adaptive opponent that learns from the player's move history and patterns to predict the next move, with full game statistics tracking.
 
-These projects helped me gain hands-on experience with real-world AI development and problem solving.
+## Tech Stack
 
-### Each project folder includes:
+| Area | Technology |
+|---|---|
+| Language | Python 3.12 |
+| Web framework | Django (chatbot, classifier, detector apps) |
+| ML / DL | Keras / TensorFlow models (Teachable Machine exports, `.h5` / `.tflite`) |
+| Computer vision | YOLOv8-style detection + SORT tracking |
+| NLP | Custom NLP processor for FAQ question matching |
+| Database | SQLite |
+| Tools | Git & GitHub |
 
-Project description
+## Project Structure
 
-Installation instructions
+```
+├── faq_chatbot/          # Django + NLP FAQ chatbot
+├── image_classifier/     # Django + Teachable Machine emotion classifier
+├── object_detector/      # Django + detection & SORT tracking for video
+└── Rock-Paper-Scissors-with-AI-Opponent.py
+```
 
-Code implementation
+## Getting Started
 
-Results or outputs
+Each Django project runs the same way — for example, the FAQ chatbot:
 
-Technologies Used
+```bash
+git clone https://github.com/datascientist970/Apexcify-Technologys.git
+cd Apexcify-Technologys/faq_chatbot
 
-### Some of the technologies and tools used in these projects include:
+python -m venv venv
+venv\Scripts\activate        # Windows  (use source venv/bin/activate on Linux/macOS)
+pip install django
+python manage.py migrate
+python manage.py runserver
+```
 
-Python
+Repeat with `image_classifier/` or `object_detector/` (the classifier also needs TensorFlow/Keras to load the bundled model files). The game needs nothing beyond Python:
 
-Machine Learning Libraries
+```bash
+python Rock-Paper-Scissors-with-AI-Opponent.py
+```
 
-Deep Learning Frameworks
+## What I Learned
 
-APIs for AI models
-
-Data Processing Tools
-
-Git & GitHub
-
-Learning Outcomes
-
-### Through this internship, I gained practical experience in:
-
-Building AI-based applications
-
-Working with machine learning models
-
-Integrating AI APIs
-
-Writing clean and structured code
-
-Managing projects using GitHub
-
-Documenting technical work
+Building production-style AI features end-to-end: training and exporting ML models, integrating them into Django web apps, NLP intent matching, real-time video processing and tracking, and documenting technical work professionally.
 
 ## Author
 
-Muhammad Dawood
-AI Engineer Intern at Apexcify Technologies
-
-### GitHub: https://github.com/datascientist970
-### Linkedin: https://www.linkedin.com/in/dawood406
-### Portfolio: https://datascientist970.github.io/github-portfolio/
-
-### Note
-
-This repository is part of my learning journey in Artificial Intelligence and will continue to grow as I complete more projects and experiments.
+**Muhammad Dawood** — AI & Data Science Engineer (AI Engineer Intern, Apexcify Technologys)
+GitHub: https://github.com/datascientist970 · Mardan, Pakistan
